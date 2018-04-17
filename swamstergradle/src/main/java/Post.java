@@ -17,7 +17,7 @@ public class Post {
 
 		// Attach a listener to read the data at our posts reference
 		ref.addValueEventListener(new ValueEventListener() {
-			@Override
+			@Override 
 			public void onDataChange(DataSnapshot dataSnapshot) {
 				Post post = dataSnapshot.getValue(Post.class);
 				System.out.println(post);
