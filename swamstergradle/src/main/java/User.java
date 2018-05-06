@@ -11,16 +11,19 @@ public class User {
   public String nickname;
 
   public User(String dateOfBirth, String fullName) {
-    // ...
+	  this.date_of_birth= dateOfBirth;
+	  this.full_name= fullName;
   }
 
   public User(String dateOfBirth, String fullName, String nickname) {
-    // ...
+	  this.date_of_birth= dateOfBirth;
+	  this.full_name= fullName;
+	  this.nickname= nickname;
   }
 
   public static void main(String[] args) {
   final FirebaseDatabase database = FirebaseDatabase.getInstance();
-  DatabaseReference ref = database.getReference("server/saving-data/fireblog");
+  DatabaseReference ref = database.getReference("swamsteras/server");
   
 DatabaseReference usersRef = ref.child("users");
 

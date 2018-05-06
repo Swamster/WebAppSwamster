@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Today's Date</title>
+
+
+</head>
+
+<body>
+
+
+<form action="Swamster" method="POST">
+  <input type="text" name="enter">
+</form>
+
+
+
+
+
+ 
+    
+
+   
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJIorYfyXdhQ9THqnJsXp4rjGIjxcS1ds",
+    authDomain: "swamsteras.firebaseapp.com",
+    databaseURL: "https://swamsteras.firebaseio.com",
+    projectId: "swamsteras",
+    storageBucket: "swamsteras.appspot.com",
+    messagingSenderId: "824450759757"
+  };
+  firebase.initializeApp(config);
+//var database = firebase.database();
+
+
+  //firebase.database().ref('server').set("Heyo World");
+
+</script>
+
+
+<script type="text/javascript">
+
+function send(message) {
+	
+var message1 = message.toString();
+var database = firebase.database();
+
+
+firebase.database().ref('server').set(message1);
+}
+
+</script>  
+
+
+
+</html>
