@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* Page background*/
+
+.bodybackground {
+	background-color: white;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+/* Navigation bar */
+ 
+.topnav {
+    background-color: #0099cc;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #007399;
+    color: white;
+}
+
+.active {
+    background-color: #007399;
+    color: #66d9ff;
+}
+
+/* Search box inside the navigation bar */
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+/* default body */
+
+.defaultbody {
+	background-color:white;
+	padding: 1%;
+	height: 20%;
+}	
+
+/* default textbox*/
+
+.defaulttext{
+	background-color: #007399;
+	color: white;
+	padding: 5%;
+	overflow: hidden;
+}
+
+.titletext{
+	text-align: center;
+}

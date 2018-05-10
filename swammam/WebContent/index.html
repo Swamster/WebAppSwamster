@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript" src="fireconnect.js"></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="design.css"/>
 <title>Swamster | Home</title>
 </head>
 <body class="bodybackground">
@@ -20,8 +19,18 @@
 
 <div class="defaultbody" id="indexbody1">
   <div class="defaulttext" id="indextext1">
-	<p class= "titletext" id="indextitletext"> charlie is a sad boi </p>
-	<button type="button">Click Me!</button>
+  <p>Enter sub-class </p>
+	<form action="Swamster" method="POST">
+	<button type="submit" name="enter">To Submit</button>
+	
+</form>
+
+<form action="Swamster" method="POST" enctype= "multipart/form-data">
+ <input type="text" name="status" />
+<input type="file" name="input">
+<input type = "submit" name = "Upload" />
+</form>
+
   </div>
 </div>
 
@@ -41,16 +50,24 @@
   firebase.initializeApp(config);
 </script>
 
-<script>
-//Get a reference to the database service
-//var database = firebase.database();
+<script type="text/javascript">
 
-
-	  //firebase.database().ref('server').set("Heyo World");
+function send(message) {
 	
+var obj = JSON.parse(message);
+var database = firebase.database();
 
 
-</script>
+firebase.database().ref('/meetdata/').set({}
+		meet: "go"});
+}
+
+function set(race, name, email, imageUrl) {
+	  firebase.database().ref('users/' + userId).set(obj);
+	}
+
+</script>  
+
 
 
 
