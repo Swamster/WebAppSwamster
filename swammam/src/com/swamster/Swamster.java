@@ -89,7 +89,7 @@ public class Swamster extends HttpServlet {
        try {
 		JSONArray json= new JSONArray(plzgo.getJson());
 	
-		
+		System.out.println(json);
 
 		
 		response.getOutputStream().println("<!DOCTYPE html>\r\n" + 

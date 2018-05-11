@@ -34,7 +34,7 @@ public class csvParse {
     private String source;
     private ArrayList<String> eventId;
     private Meet meet;
-    private JSONArray json;
+    private String jsonstr;
 
 //    public csvParse(InputStream is) {
 //        events = new ArrayList<Event>();
@@ -57,7 +57,8 @@ public class csvParse {
         events = new ArrayList<Event>();
         createEvents();
         JSONArray json = new JSONArray(Arrays.asList(events));
-        this.json= json;
+        String jsonstr = json.toString();
+        this.jsonstr= jsonstr;
 //        Meet meet = new Meet(events);
 //        this.meet=meet;
         
@@ -251,8 +252,8 @@ public class csvParse {
     	return meet;
     }
     
-    public JSONArray getJson() {
-    	return json;
+    public String getJson() {
+    	return jsonstr;
     }
     
     

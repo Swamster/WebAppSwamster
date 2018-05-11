@@ -54,17 +54,14 @@
 
 function send(message) {
 	
-var obj = JSON.parse(message);
+
 var database = firebase.database();
 
 
-firebase.database().ref('/meetdata/').set({}
-		meet: "go"});
+firebase.database().ref('server/').set(message);
 }
 
-function set(race, name, email, imageUrl) {
-	  firebase.database().ref('users/' + userId).set(obj);
-	}
+
 
 </script>  
 
